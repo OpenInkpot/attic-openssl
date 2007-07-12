@@ -2,10 +2,9 @@ Source: openssl
 XCS-Cross-Host-Build-Depends: debhelper (>= 4.2.0), binutils (>= 2.14.90.0.7), m4, bc
 XCS-Cross-Build-Depends: zlib1g-dev
 Build-Depends: debhelper (>= 4.2.0), binutils (>= 2.14.90.0.7), zlib1g-dev, m4, bc
-Section: utils
+Section: security
 Priority: optional
-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
-Uploaders: Christoph Martin <christoph.martin@uni-mainz.de>, Kurt Roeckx <kurt@roeckx.be>
+Maintainer: Alexander Shishkin <virtuoso@slind.org>
 Standards-Version: 3.6.1
 
 Package: openssl
@@ -28,7 +27,7 @@ Description: Secure Socket Layer (SSL) binary and related cryptographic tools
   o  Handling of S/MIME signed or encrypted Mail
 
 Package: libssl0.9.8
-Section: libs
+Section: security
 Priority: important
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -40,7 +39,7 @@ Description: SSL shared libraries
  It is part of the OpenSSL implementation of SSL.
 
 Package: libssl-dev
-Section: libdevel
+Section: host-tools
 Priority: optional
 Architecture: any
 Depends: libssl0.9.8 (= ${Source-Version}), zlib1g-dev
@@ -51,7 +50,7 @@ Description: SSL development libraries, header files and documentation
  It is part of the OpenSSL implementation of SSL.
 
 Package: libssl0.9.8-dbg
-Section: libdevel
+Section: host-tools
 Priority: extra
 Architecture: any
 Depends: libssl0.9.8 (= ${Source-Version})

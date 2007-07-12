@@ -1,3 +1,10 @@
+openssl (0.9.8a-7.slind2) unstable; urgency=low
+
+  * Update section fields to 'security' and 'host-tools'.
+  * Change maintainer, remove uploaders.
+
+ -- Alexander Shishkin <virtuoso@slind.org>  Thu, 12 Jul 2007 14:19:53 +0400
+
 openssl (0.9.8a-7.slind1) unstable; urgency=low
 
   * New build dependencies
