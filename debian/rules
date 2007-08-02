@@ -38,7 +38,6 @@ build:
 	echo "HOST_ARCH is $(HOST_ARCH)"
 	./Configure no-shared $(CONFARGS) debian-$(HOST_ARCH)
 	AS=$(DEB_HOST_GNU_TYPE)-gcc make -f Makefile DIRS="crypto ssl" all
-	-make test
 	mv libcrypto.a libcrypto.static
 	mv libssl.a libssl.static
 	make -f Makefile DIRS="crypto ssl" clean
@@ -47,7 +46,6 @@ build:
 		set -xe; \
 		./Configure shared $(CONFARGS) debian-$(HOST_ARCH)-$$opt; \
 		make -f Makefile DIRS="crypto ssl" all; \
-		make test || /bin/true; \
 		mkdir -p $$opt; \
 		mv libcrypto.so* libssl.so* $$opt/; \
 		make -f Makefile DIRS="crypto ssl" clean; \
@@ -57,7 +55,6 @@ build:
 	ln -sf apps/openssl.pod crypto/crypto.pod ssl/ssl.pod doc/
 #	make -f Makefile debian-shared
 	make -f Makefile all
-	-make test
 #	strip apps/openssl
 #	make -f Makefile clean DIRS="crypto ssl"
 #	./Configure --prefix=/usr --openssldir=/usr/lib/ssl no-idea no-mdc2 no-rc5 debian-$(HOST_ARCH)
