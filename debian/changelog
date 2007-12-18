@@ -1,3 +1,9 @@
+openssl (0.9.8a-7.slind3) unstable; urgency=low
+
+  * Move -dev package to 'libdevel' and -dbg package to 'debug' sections.
+
+ -- Alexander Shishkin <virtuoso@slind.org>  Tue, 18 Dec 2007 13:00:39 +0300
+
 openssl (0.9.8a-7.slind2) unstable; urgency=low
 
   * Update section fields to 'security' and 'host-tools'.

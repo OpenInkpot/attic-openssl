@@ -39,7 +39,7 @@ Description: SSL shared libraries
  It is part of the OpenSSL implementation of SSL.
 
 Package: libssl-dev
-Section: host-tools
+Section: libdevel
 Priority: optional
 Architecture: any
 Depends: libssl0.9.8 (= ${Source-Version}), zlib1g-dev
@@ -50,7 +50,7 @@ Description: SSL development libraries, header files and documentation
  It is part of the OpenSSL implementation of SSL.
 
 Package: libssl0.9.8-dbg
-Section: host-tools
+Section: debug
 Priority: extra
 Architecture: any
 Depends: libssl0.9.8 (= ${Source-Version})
