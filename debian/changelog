@@ -1,3 +1,9 @@
+openssl (0.9.8a-7.slind4) unstable; urgency=low
+
+  * Added armel support, taken from Debian 0.9.8e-1
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Thu, 08 May 2008 00:16:05 +0700
+
 openssl (0.9.8a-7.slind3) unstable; urgency=low
 
   * Move -dev package to 'libdevel' and -dbg package to 'debug' sections.
